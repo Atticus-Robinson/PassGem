@@ -6,7 +6,7 @@ const numberCase = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const specialCase = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '`', '~'];
 
 //ASk for length, parse answer, return value
-var lengthResponse = function() {
+function lengthResponse() {
   leng = "";
 
   //Validate entry, re-run if invalid
@@ -31,7 +31,7 @@ var prompts = {
   numeric: "",
   special: "",
 }
-var charPrompts = function() {
+function charPrompts() {
   prompts.upper = window.confirm("Upper case letters?");
   prompts.lower = window.confirm("Lower case letters?");
   prompts.numeric = window.confirm("Numbers?");
@@ -44,14 +44,14 @@ function switchSelector() {
   return switchValue;
 }
 
-var randomFill = function() {
-  
+function randomFill() {
+
   //Set a = to random 1-4 with switchSelector()
   a = switchSelector();
   console.log("Switch Selector: " + a);
-  
-  switch(a) {
-    
+
+  switch (a) {
+
     //Upper Case
     case 1:
       //If prompts.upper (from inital response) true
@@ -60,6 +60,7 @@ var randomFill = function() {
         retVar = randomCase(upperCase);
         break;
       }
+
       //Else, re-run function
       else {
         randomFill();
@@ -102,8 +103,8 @@ var randomFill = function() {
 }
 
 //Take array of either upper, lower, number, character
-var randomCase = function(caseArray) {
-  
+function randomCase(caseArray) {
+
   //Choose random number based on length of array
   b = Math.floor(Math.random() * caseArray.length);
   console.log("Array number: " + b);
@@ -116,24 +117,24 @@ var randomCase = function(caseArray) {
   return caseSelect;
 }
 
-var generatePassword = function() {
-    //debugger;
+function generatePassword() {
+  //debugger;
   //Reset array for additional actions
   pwdArray = [];
   i = 0;
 
   lengthResponse();
   charPrompts();
-  
+
   //Iterate though array based on length, push from randomFill function
   while (i < leng) {
-      var pushVar;
-      //Set pushVar = to return from randomFill() switch
-      pushVar = randomFill();
-      //Push var into array
-      pwdArray.push(pushVar);
-      //Add one to counter
-      i++;
+    var pushVar;
+    //Set pushVar = to return from randomFill() switch
+    pushVar = randomFill();
+    //Push var into array
+    pwdArray.push(pushVar);
+    //Add one to counter
+    i++;
   }
   //Condense array into single string, no quotes commas 
   let finalString = pwdArray.join("");
