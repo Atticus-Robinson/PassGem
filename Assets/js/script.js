@@ -11,7 +11,7 @@ function lengthResponse() {
 
   //Validate entry, re-run if invalid
   while (leng === "" || leng === null) {
-    leng = prompt("How many characters (Between 8-128");
+    leng = prompt("How many characters (Between 8-128)");
     if (leng < 8 || leng > 128) {
       leng = "";
     }
