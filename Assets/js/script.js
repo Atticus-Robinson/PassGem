@@ -5,7 +5,7 @@ const lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', '
 const numberCase = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const specialCase = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=', '`', '~'];
 
-//ASk for length, parse answer, return value
+//Ask for length, parse answer, return value
 function lengthResponse() {
   leng = "";
 
@@ -25,7 +25,7 @@ function lengthResponse() {
 
 //Prompts storage object
 var prompts = {
-  
+
   upper: "",
   lower: "",
   numeric: "",
