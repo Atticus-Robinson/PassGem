@@ -24,4 +24,4 @@ https://atticus-robinson.github.io/PassGem/
 
 ## Page Image
 
-![PassGem](Assets\images\Page Screenshot.png)
+![PassGem](./Assets\images\Page Screenshot.png)
